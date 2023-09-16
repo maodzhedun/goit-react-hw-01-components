@@ -12,6 +12,7 @@ export const Statistic = styled.ul`
 export const Data = styled.li`
   display: flex;
   flex-direction: column;
-  color: white;
+  padding: 22px;
+  color: rgb(230, 220, 220);
   background-color: ${getRandomColor};
-  `;
+`;

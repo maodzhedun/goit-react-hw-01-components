@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from "components/FriendListItem/FriendListItem";
 import { Container } from 'components/util/General.styled';
+import { List,Item } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
     return (
         <Container>
-        <ul className="friend-list">
+        <List>
             {friends.map(({ avatar, name, isOnline, id }) => (
-                <li className="item" key={id}>
+                <Item key={id}>
                     <FriendListItem
                         avatar={avatar}
                         name={name}
                         isOnline={isOnline}
                     />
-                </li>
+                </Item>
             ))}
-        </ul >
+        </List >
         </Container>  
     );
 };

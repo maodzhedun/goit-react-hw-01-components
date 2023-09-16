@@ -1,9 +1,9 @@
-export function FriendListItem({ avatar, name, isOnline}) {
+import { Status } from "./FriendListItem.styled"
+
+export function FriendListItem({ avatar, name, isOnline }) {
     return <>
-            <li>
-                <span isOnline={isOnline}></span>
+                <Status>{isOnline}</Status>
                 <img src={avatar} alt={name} width="48" />
                 <p>{name}</p>
-            </li>
-           </>
+            </>
 }
